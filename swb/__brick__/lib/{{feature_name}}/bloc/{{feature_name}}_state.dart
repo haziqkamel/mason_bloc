@@ -7,7 +7,7 @@ final class {{feature_name.pascalCase()}}State extends Equatable {
     this.status = {{feature_name.pascalCase()}}Status.initial,
   });
 
-  final {{feature_name.pascalCase()}}Status status;
+  final {{feature_name.pascalCase()}}Status? status;
 
 
   {{feature_name.pascalCase()}}State copyWith({
@@ -19,5 +19,5 @@ final class {{feature_name.pascalCase()}}State extends Equatable {
   }
 
   @override
-  List<Object> get props => [status];
+  List<Object?> get props => [status];
 }
