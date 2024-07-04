@@ -11,7 +11,7 @@ final class {{feature_name.pascalCase()}}State extends Equatable {
 
 
   {{feature_name.pascalCase()}}State copyWith({
-    {{feature_name.pascalCase()}}Status? Function()? status,
+    {{feature_name.pascalCase()}}Status? status,
   }) {
     return {{feature_name.pascalCase()}}State(
       status: status != null ? status() : this.status,

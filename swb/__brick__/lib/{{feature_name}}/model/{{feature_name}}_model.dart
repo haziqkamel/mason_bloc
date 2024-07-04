@@ -9,8 +9,6 @@ extension {{feature_name.pascalCase()}}StatusX on {{feature_name.pascalCase()}}S
         return 'Active';
       case {{feature_name.pascalCase()}}Status.completed:
         return 'Completed';
-      default:
-        return '';
     }
   }
 }
