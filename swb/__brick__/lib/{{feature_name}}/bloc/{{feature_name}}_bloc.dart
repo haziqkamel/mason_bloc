@@ -16,12 +16,12 @@ class {{feature_name.pascalCase()}}Bloc extends Bloc<{{feature_name.pascalCase()
   final RepositoryName _repositoryName;
 
   void _on{{feature_name.pascalCase()}}SubcriptionRequested({{feature_name.pascalCase()}}SubcriptionRequested event, Emitter<{{feature_name.pascalCase()}}State> emit) {
-    emit(state.copyWith(status: {{feature_name.pascalCase()}}Status.loading));
+    emit(state.copyWith(status: () => {{feature_name.pascalCase()}}Status.loading));
     try {
       // final response = await _repositoryName.{{feature_name.camelCase()}}();
-      emit(state.copyWith(status: {{feature_name.pascalCase()}}Status.success));
+      emit(state.copyWith(status: () => {{feature_name.pascalCase()}}Status.success));
     } catch (e) {
-      emit(state.copyWith(status: {{feature_name.pascalCase()}}Status.failure));
+      emit(state.copyWith(status: () => {{feature_name.pascalCase()}}Status.failure));
     }
   }
 }
