@@ -4,6 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class {{feature_name.pascalCase()}}Page extends StatelessWidget {
   const {{feature_name.pascalCase()}}Page({super.key});
 
+  static Page<void> page() => const MaterialPage<void>(child: {{feature_name.pascalCase()}}Page());
+  static Route<void> route() {
+    return MaterialPageRoute<void>(builder: (_) => 
+      const {{feature_name.pascalCase()}}Page(), 
+      settings: const RouteSettings(name: '{{feature_name}}.pascalCase()')
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
