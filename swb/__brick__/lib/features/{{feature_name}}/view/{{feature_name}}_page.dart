@@ -8,7 +8,7 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
   static Route<void> route() {
     return MaterialPageRoute<void>(builder: (_) => 
       const {{feature_name.pascalCase()}}Page(), 
-      settings: const RouteSettings(name: '{{feature_name}}.pascalCase()')
+      settings: const RouteSettings(name: '{{feature_name}}')
     );
   }
 
@@ -32,7 +32,7 @@ class {{feature_name.pascalCase()}}View extends StatelessWidget {
 
   return Scaffold(
       appBar: AppBar(
-      title: Text('{{feature_name}}.pascalCase()'),
+      title: Text('{{feature_name}}'),
       ),
       body: BlocBuilder<{{feature_name.pascalCase()}}Bloc, {{feature_name.pascalCase()}}State>(
         builder: (context, state) {
