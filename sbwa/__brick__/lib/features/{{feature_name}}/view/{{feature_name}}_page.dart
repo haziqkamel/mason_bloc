@@ -17,7 +17,6 @@ class {{feature_name.pascalCase()}}Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => {{feature_name.pascalCase()}}Bloc(
-        repositoryName: context.read<RepositoryName>(),
       )..add(const {{feature_name.pascalCase()}}SubcriptionRequested()),
       child: const {{feature_name.pascalCase()}}View(),
     );
