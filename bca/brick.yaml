@@ -13,7 +13,7 @@ version: 0.1.0+1
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
 environment:
-  mason: ^0.1.1
+    mason: ">=0.1.0-dev.53 <0.2.0"
 
 # Variables specify dynamic values that your brick depends on.
 # Zero or more variables can be specified for a given brick.
@@ -26,8 +26,8 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
-  name:
+  feature_name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: Feature name
+    default: default
+    prompt: What is your feature or screen?
